@@ -285,6 +285,80 @@ body {
   gap: 6px;
 }
 
+/* Teacher Dashboard Cards */
+.teacher-sub-card {
+  border: 1.5px solid var(--wireframe-stroke);
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #ffffff;
+}
+
+.teacher-alert-card {
+  background: #f8fafc;
+  border: 1.5px solid var(--wireframe-stroke);
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.chat-velocity-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  padding: 4px 0;
+  color: #334155;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.chat-velocity-row:last-child {
+  border-bottom: none;
+}
+
+/* Teacher Chat Oversight Cards */
+.teacher-class-card {
+  border: 1.5px solid var(--wireframe-stroke);
+  border-radius: 6px;
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.teacher-class-card.active-gray {
+  background: #f1f5f9;
+  border-color: #334155;
+}
+
+/* Toggle Switch (Low-Fi) */
+.toggle-switch-wireframe {
+  width: 38px;
+  height: 20px;
+  background: #334155;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.toggle-knob {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  right: 2px;
+}
+
 /* Stat Grid Cards */
 .student-toggle-cards {
   display: grid;
