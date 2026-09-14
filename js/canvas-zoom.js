@@ -39,10 +39,9 @@ class ExcalidrawCanvas {
 
   centerContent() {
     const viewportWidth = window.innerWidth;
-    const contentWidth = 1420; // content max-width
-    if (viewportWidth < contentWidth) {
-      // Auto-fit if screen is smaller
-      this.scale = Math.max(0.45, (viewportWidth - 40) / contentWidth);
+    const contentWidth = this.content ? (this.content.offsetWidth || 1460) : 1460;
+    if (viewportWidth < contentWidth + 40) {
+      this.scale = Math.max(0.4, (viewportWidth - 40) / contentWidth);
       this.panX = Math.max(20, (viewportWidth - contentWidth * this.scale) / 2);
     } else {
       this.scale = 1;
@@ -106,12 +105,12 @@ class ExcalidrawCanvas {
   fitToScreen() {
     const viewportWidth = window.innerWidth - 60;
     const viewportHeight = window.innerHeight - 80;
-    const contentWidth = 1420;
-    const contentHeight = 1750;
+    const contentWidth = this.content ? (this.content.offsetWidth || 1460) : 1460;
+    const contentHeight = this.content ? (this.content.scrollHeight || 3200) : 3200;
 
     const scaleX = viewportWidth / contentWidth;
     const scaleY = viewportHeight / contentHeight;
-    this.scale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.35), 1.0);
+    this.scale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.25), 1.0);
 
     this.panX = (window.innerWidth - contentWidth * this.scale) / 2;
     this.panY = 40;

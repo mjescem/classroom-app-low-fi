@@ -718,52 +718,277 @@
         </section>
 
         <!-- ================= 3. DESKTOP VIEW ================= -->
-        <section class="section-group" style="margin-top: 20px;">
+        <section class="section-group" style="margin-top: 24px;">
           <h2 class="section-header-title">Desktop view</h2>
 
-          <h3 style="font-size:15px; font-weight:600; color:#64748b; margin-top:4px;">Student view</h3>
           <div class="wireframes-row desktop-row">
 
             <!-- DESKTOP 1: Student Dashboard -->
-            <div class="wireframe-column">
-              <h3 class="wireframe-subtitle">Student Dashboard</h3>
+            <div class="wireframe-column desktop-col">
+              <h3 class="wireframe-subtitle">Student Dashboard (Widescreen Desktop View)</h3>
               <div class="desktop-wireframe">
-                <div class="app-topnav">
-                  <div class="app-topnav-logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg> Classroom</div>
-                  <div class="app-topnav-search"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg> Search assignments, classes...</div>
-                  <div class="app-topnav-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="#64748b"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div>
-                </div>
-                <div class="desktop-app-body">
-                  <div class="desktop-sidebar">
-                    <div class="sidebar-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> Dashboard</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Assignments</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Group Chat</div>
-                    <div class="sidebar-section-label">My Classes</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> CS 101</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> CS 102</div>
+                <!-- OS Window Chrome / Titlebar -->
+                <div class="window-titlebar">
+                  <div class="window-controls">
+                    <span class="win-dot close"></span>
+                    <span class="win-dot min"></span>
+                    <span class="win-dot max"></span>
                   </div>
+                  <div class="browser-tabs">
+                    <div class="browser-tab">
+                      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                      <span>Classroom — Student Dashboard</span>
+                      <span class="tab-close">✕</span>
+                    </div>
+                    <div class="browser-new-tab">+</div>
+                  </div>
+                </div>
+
+                <!-- Browser URL & Navigation Bar -->
+                <div class="browser-navbar">
+                  <div class="browser-nav-btns">
+                    <button class="browser-nav-btn">‹</button>
+                    <button class="browser-nav-btn">›</button>
+                    <button class="browser-nav-btn">↻</button>
+                  </div>
+                  <div class="browser-url-bar">
+                    <svg class="url-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span class="url-text">https://classroom.edu/app/student/cs101/dashboard</span>
+                  </div>
+                  <div class="browser-actions">
+                    <span>★</span>
+                    <span>🧩</span>
+                  </div>
+                </div>
+
+                <!-- Desktop Application Top Navigation -->
+                <div class="app-topnav">
+                  <div class="app-topnav-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    <span>Classroom</span>
+                  </div>
+                  <div class="app-topnav-search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <span>Search courses, assignments, peers, notes...</span>
+                    <span class="search-shortcut">⌘K</span>
+                  </div>
+                  <div class="app-topnav-right">
+                    <div class="app-topnav-badge">
+                      <span class="sync-dot"></span>
+                      <span>Live Synced</span>
+                    </div>
+                    <div style="font-size:11px; color:#64748b; display:flex; align-items:center; gap:4px;">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    </div>
+                    <div class="app-topnav-avatar">
+                      <div class="avatar-img-circle">RS</div>
+                      <span>Rhea Solomon (Student)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Desktop Main App Body -->
+                <div class="desktop-app-body">
+                  <!-- Desktop Sidebar Navigation -->
+                  <div class="desktop-sidebar">
+                    <div class="sidebar-section-label">Main Menu</div>
+                    <div class="sidebar-item active">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                      <span>Dashboard</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+                      <span>Assignments</span>
+                      <span class="sidebar-badge">3</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                      <span>Group Chat</span>
+                      <span class="sidebar-badge">2</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                      <span>Course Materials</span>
+                    </div>
+
+                    <div class="sidebar-section-label">Enrolled Classes</div>
+                    <div class="sidebar-item">
+                      <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#3b82f6;"></span>
+                      <span>CS 101: Intro to CS</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#10b981;"></span>
+                      <span>CS 102: Data Structures</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#8b5cf6;"></span>
+                      <span>SE 201: Software Eng</span>
+                    </div>
+
+                    <!-- Offline Storage Meter Widget -->
+                    <div class="sidebar-storage-widget">
+                      <div style="display:flex; justify-content:space-between; font-size:10px; font-weight:700; color:#334155; margin-bottom:4px;">
+                        <span>Offline Storage</span>
+                        <span>14.2 MB</span>
+                      </div>
+                      <div class="desktop-progress-track" style="height:5px;">
+                        <div class="desktop-progress-fill" style="width:28%;"></div>
+                      </div>
+                      <div style="font-size:9px; color:#64748b; margin-top:4px;">3 Docs &amp; 1 Draft Cached</div>
+                    </div>
+                  </div>
+
+                  <!-- Desktop Main Content Area -->
                   <div class="desktop-main">
-                    <div class="desktop-offline-bar" style="font-size:10px; padding:5px 10px;"><span>● Live Synced</span><span style="color:#64748b; font-weight:500;">📦 3 docs cached offline</span></div>
+                    <!-- Top Action Banner -->
+                    <div class="desktop-banner-row">
+                      <div>
+                        <div style="font-size:14px; font-weight:700; color:#0f172a;">Welcome back, Rhea! 👋</div>
+                        <div style="font-size:11px; color:#64748b; margin-top:2px;">Fall 2026 Term • Week 4 • You have 2 assignments due this week.</div>
+                      </div>
+                      <div style="display:flex; gap:8px;">
+                        <button class="desktop-btn">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                          Download All Cached
+                        </button>
+                        <button class="desktop-btn primary">+ Submit Assignment</button>
+                      </div>
+                    </div>
+
+                    <!-- 4-Stat Metric Cards Grid -->
                     <div class="desktop-stat-grid">
-                      <div class="desktop-stat-card"><div class="desktop-stat-val">85%</div><div class="desktop-stat-label">Overall Completion</div></div>
-                      <div class="desktop-stat-card"><div class="desktop-stat-val">3.8</div><div class="desktop-stat-label">Current GPA</div></div>
-                      <div class="desktop-stat-card"><div class="desktop-stat-val">2</div><div class="desktop-stat-label">Due This Week</div></div>
-                      <div class="desktop-stat-card"><div class="desktop-stat-val">1</div><div class="desktop-stat-label">Draft In Progress</div></div>
+                      <div class="desktop-stat-card">
+                        <div class="desktop-stat-val">85%</div>
+                        <div class="desktop-stat-label">Overall Completion</div>
+                        <div class="desktop-stat-sub">12 of 14 tasks submitted (+5%)</div>
+                      </div>
+                      <div class="desktop-stat-card">
+                        <div class="desktop-stat-val">3.80</div>
+                        <div class="desktop-stat-label">Cumulative GPA</div>
+                        <div class="desktop-stat-sub">Dean's List standing (Top 10%)</div>
+                      </div>
+                      <div class="desktop-stat-card">
+                        <div class="desktop-stat-val">2 Tasks</div>
+                        <div class="desktop-stat-label">Due This Week</div>
+                        <div class="desktop-stat-sub">Next: Lab 4 in 2 days</div>
+                      </div>
+                      <div class="desktop-stat-card">
+                        <div class="desktop-stat-val">1 Draft</div>
+                        <div class="desktop-stat-label">Draft In Progress</div>
+                        <div class="desktop-stat-sub">Saved locally (Offline ready)</div>
+                      </div>
                     </div>
+
+                    <!-- 2-Column Wide Workspace Widgets -->
                     <div class="desktop-two-col">
-                      <div class="desktop-card">
-                        <div class="desktop-card-title">Completion by Class</div>
-                        <div><div style="display:flex;justify-content:space-between;font-size:10.5px;color:#334155;margin-bottom:3px;"><span>CS 101: Intro to CS</span><span>90%</span></div><div class="desktop-progress-track"><div class="desktop-progress-fill" style="width:90%"></div></div></div>
-                        <div><div style="display:flex;justify-content:space-between;font-size:10.5px;color:#334155;margin-bottom:3px;"><span>CS 102: Data Structures</span><span>80%</span></div><div class="desktop-progress-track"><div class="desktop-progress-fill" style="width:80%"></div></div></div>
-                        <div class="desktop-card-title" style="margin-top:4px;">Grade Trend</div>
-                        <svg viewBox="0 0 200 50" style="width:100%;height:40px;"><line x1="10" y1="40" x2="190" y2="40" stroke="#e2e8f0" stroke-width="1"/><circle cx="20" cy="36" r="2.5" fill="#64748b"/><circle cx="70" cy="28" r="2.5" fill="#64748b"/><circle cx="130" cy="20" r="2.5" fill="#64748b"/><circle cx="185" cy="10" r="3" fill="#1e293b"/><polyline points="20,36 70,28 130,20 185,10" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-linecap="round"/><text x="20" y="48" font-size="7" fill="#94a3b8" text-anchor="middle">Quiz 1</text><text x="70" y="48" font-size="7" fill="#94a3b8" text-anchor="middle">Lab 2</text><text x="130" y="48" font-size="7" fill="#94a3b8" text-anchor="middle">Midterm</text><text x="185" y="48" font-size="7" fill="#334155" text-anchor="middle" font-weight="bold">Lab 3</text></svg>
+                      <!-- Left Column: Class Progress & Performance Chart -->
+                      <div style="display:flex; flex-direction:column; gap:14px;">
+                        <div class="desktop-card">
+                          <div class="desktop-card-title">
+                            <span>Course Completion by Class</span>
+                            <span style="font-size:10px; color:#64748b; font-weight:500;">Active Term</span>
+                          </div>
+                          
+                          <div>
+                            <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:4px;">
+                              <span style="font-weight:600; color:#1e293b;">CS 101: Intro to Computer Science</span>
+                              <span style="font-weight:700; color:#0f172a;">90%</span>
+                            </div>
+                            <div class="desktop-progress-track">
+                              <div class="desktop-progress-fill" style="width:90%;"></div>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:4px;">
+                              <span style="font-weight:600; color:#1e293b;">CS 102: Data Structures &amp; Algorithms</span>
+                              <span style="font-weight:700; color:#0f172a;">80%</span>
+                            </div>
+                            <div class="desktop-progress-track">
+                              <div class="desktop-progress-fill" style="width:80%;"></div>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:4px;">
+                              <span style="font-weight:600; color:#1e293b;">SE 201: Software Engineering I</span>
+                              <span style="font-weight:700; color:#0f172a;">95%</span>
+                            </div>
+                            <div class="desktop-progress-track">
+                              <div class="desktop-progress-fill" style="width:95%;"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Grade Trends Widescreen Graph -->
+                        <div class="desktop-card">
+                          <div class="desktop-card-title">
+                            <span>Grade Performance Trend Over Time</span>
+                            <span style="font-size:11px; font-weight:700; color:#0f172a;">Current: 3.80 GPA (A)</span>
+                          </div>
+                          <svg viewBox="0 0 500 90" style="width:100%; height:80px; overflow:visible;">
+                            <line x1="20" y1="15" x2="480" y2="15" stroke="#e2e8f0" stroke-width="1"/>
+                            <line x1="20" y1="40" x2="480" y2="40" stroke="#e2e8f0" stroke-width="1"/>
+                            <line x1="20" y1="65" x2="480" y2="65" stroke="#cbd5e1" stroke-width="1"/>
+                            <circle cx="40" cy="55" r="3.5" fill="#64748b"/>
+                            <circle cx="150" cy="38" r="3.5" fill="#64748b"/>
+                            <circle cx="270" cy="28" r="3.5" fill="#64748b"/>
+                            <circle cx="390" cy="18" r="4.5" fill="#0f172a"/>
+                            <circle cx="460" cy="14" r="3" fill="#cbd5e1" stroke="#334155" stroke-dasharray="2 2"/>
+                            <polyline points="40,55 150,38 270,28 390,18" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="390" y1="18" x2="460" y2="14" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <text x="40" y="82" font-size="9" fill="#64748b" text-anchor="middle">Quiz 1 (85%)</text>
+                            <text x="150" y="82" font-size="9" fill="#64748b" text-anchor="middle">Lab 2 (90%)</text>
+                            <text x="270" y="82" font-size="9" fill="#64748b" text-anchor="middle">Midterm (92%)</text>
+                            <text x="390" y="82" font-size="9" fill="#0f172a" font-weight="bold" text-anchor="middle">Lab 3 (96%)</text>
+                            <text x="460" y="82" font-size="9" fill="#94a3b8" font-style="italic" text-anchor="middle">Proj 1 (Goal)</text>
+                          </svg>
+                        </div>
                       </div>
-                      <div class="desktop-card">
-                        <div class="desktop-card-title">Upcoming Deadlines</div>
-                        <div class="desktop-table-row"><span>Lab 4: Binary Search Trees</span><span style="font-size:9.5px;color:#64748b;">Fri 11:59 PM</span></div>
-                        <div class="desktop-table-row"><span>Quiz 3: Big-O</span><span style="font-size:9.5px;color:#64748b;">Wed 8:00 AM</span></div>
-                        <div class="desktop-table-row"><span>Project 1: SQL API</span><span style="font-size:9.5px;color:#64748b;">Mon Sep 22</span></div>
-                        <div style="border:1.5px solid #e2e8f0;border-radius:6px;padding:7px 10px;background:#f8fafc;margin-top:4px;font-size:10px;color:#475569;"><div style="font-weight:700;color:#0f172a;margin-bottom:2px;">📌 Next up: Lab 4</div>Draft saved • CS 101 • Due Fri 11:59 PM</div>
+
+                      <!-- Right Column: Deadlines & Next Action -->
+                      <div style="display:flex; flex-direction:column; gap:14px;">
+                        <div class="desktop-card">
+                          <div class="desktop-card-title">
+                            <span>Upcoming Deadlines</span>
+                            <span style="font-size:10px; color:#3b82f6; font-weight:600; cursor:pointer;">View Calendar ›</span>
+                          </div>
+
+                          <div class="desktop-table-row">
+                            <div>
+                              <div style="font-weight:700; color:#0f172a;">Lab 4: Binary Search Trees</div>
+                              <div style="font-size:9.5px; color:#64748b;">CS 101 • Due Fri Sep 18 (11:59 PM)</div>
+                            </div>
+                            <span style="font-size:9.5px; font-weight:700; border:1.2px solid var(--wireframe-stroke); border-radius:4px; padding:2px 6px; background:#f1f5f9;">Draft Saved</span>
+                          </div>
+
+                          <div class="desktop-table-row">
+                            <div>
+                              <div style="font-weight:700; color:#0f172a;">Quiz 3: Big-O Complexity</div>
+                              <div style="font-size:9.5px; color:#64748b;">CS 102 • Due Wed Sep 17 (8:00 AM)</div>
+                            </div>
+                            <span style="font-size:9.5px; font-weight:700; border:1.2px solid #94a3b8; border-radius:4px; padding:2px 6px; background:#fff;">Cached</span>
+                          </div>
+
+                          <div class="desktop-table-row">
+                            <div>
+                              <div style="font-weight:700; color:#0f172a;">Project 1: SQL Database API</div>
+                              <div style="font-size:9.5px; color:#64748b;">CS 101 • Due Mon Sep 22 (11:59 PM)</div>
+                            </div>
+                            <span style="font-size:9.5px; font-weight:700; border:1.2px dashed #cbd5e1; border-radius:4px; padding:2px 6px; background:#f8fafc; color:#94a3b8;">Not Cached</span>
+                          </div>
+
+                          <!-- Quick Resume Card -->
+                          <div style="border:1.5px solid var(--wireframe-stroke); border-radius:6px; padding:10px; background:#f8fafc; margin-top:2px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                              <div style="font-weight:700; font-size:11.5px; color:#0f172a;">📌 Active Draft: Lab 4</div>
+                              <button class="desktop-btn primary" style="padding:3px 8px; font-size:10px;">Resume</button>
+                            </div>
+                            <div style="font-size:10px; color:#64748b; margin-top:3px;">
+                              BST Insert &amp; Search methods • 142 words • Auto-syncs on connect
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -771,118 +996,699 @@
               </div>
             </div>
 
-            <!-- DESKTOP 2: Offline Assignments -->
-            <div class="wireframe-column">
-              <h3 class="wireframe-subtitle">Offline Assignments</h3>
+            <!-- DESKTOP 2: Offline Assignments & Storage Manager -->
+            <div class="wireframe-column desktop-col">
+              <h3 class="wireframe-subtitle">Offline Assignments &amp; Storage Center (Widescreen Desktop View)</h3>
               <div class="desktop-wireframe">
-                <div class="app-topnav">
-                  <div class="app-topnav-logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg> Classroom</div>
-                  <div class="app-topnav-search"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg> Search assignments...</div>
-                  <div class="app-topnav-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="#64748b"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+                <!-- OS Window Chrome -->
+                <div class="window-titlebar">
+                  <div class="window-controls">
+                    <span class="win-dot close"></span>
+                    <span class="win-dot min"></span>
+                    <span class="win-dot max"></span>
+                  </div>
+                  <div class="browser-tabs">
+                    <div class="browser-tab">
+                      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+                      <span>Classroom — Offline Assignments</span>
+                      <span class="tab-close">✕</span>
+                    </div>
+                    <div class="browser-new-tab">+</div>
+                  </div>
                 </div>
+
+                <!-- Browser URL Bar -->
+                <div class="browser-navbar">
+                  <div class="browser-nav-btns">
+                    <button class="browser-nav-btn">‹</button>
+                    <button class="browser-nav-btn">›</button>
+                    <button class="browser-nav-btn">↻</button>
+                  </div>
+                  <div class="browser-url-bar">
+                    <svg class="url-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span class="url-text">https://classroom.edu/app/student/assignments?mode=offline-center</span>
+                  </div>
+                  <div class="browser-actions">
+                    <span>★</span>
+                    <span>🧩</span>
+                  </div>
+                </div>
+
+                <!-- Desktop App Top Navigation -->
+                <div class="app-topnav">
+                  <div class="app-topnav-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    <span>Classroom</span>
+                  </div>
+                  <div class="app-topnav-search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <span>Filter cached tasks, quizzes, offline docs...</span>
+                    <span class="search-shortcut">⌘F</span>
+                  </div>
+                  <div class="app-topnav-right">
+                    <div class="app-topnav-badge" style="background:#fef3c7; border-color:#d97706; color:#92400e;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/></svg>
+                      <span>Offline Mode Active</span>
+                    </div>
+                    <div class="app-topnav-avatar">
+                      <div class="avatar-img-circle">RS</div>
+                      <span>Rhea Solomon</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Desktop App Body -->
                 <div class="desktop-app-body">
+                  <!-- Sidebar -->
                   <div class="desktop-sidebar">
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> Dashboard</div>
-                    <div class="sidebar-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Assignments</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Group Chat</div>
-                    <div class="sidebar-section-label">My Classes</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> CS 101</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> CS 102</div>
+                    <div class="sidebar-section-label">Assignments Filter</div>
+                    <div class="sidebar-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                      <span>All Tasks</span>
+                      <span class="sidebar-badge">6</span>
+                    </div>
+                    <div class="sidebar-item active">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      <span>Available Offline</span>
+                      <span class="sidebar-badge">3</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                      <span>Local Drafts</span>
+                      <span class="sidebar-badge">1</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Submitted</span>
+                      <span class="sidebar-badge">2</span>
+                    </div>
+
+                    <div class="sidebar-storage-widget">
+                      <div style="font-size:10px; font-weight:700; color:#0f172a; margin-bottom:2px;">Local Cache Health</div>
+                      <div style="font-size:9.5px; color:#64748b;">IndexedDB API Storage: 14.2 MB / 500 MB quota used.</div>
+                    </div>
                   </div>
+
+                  <!-- Main Content Area -->
                   <div class="desktop-main">
-                    <div class="desktop-offline-bar"><div style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/></svg>✈ You're offline</div><span style="font-size:10px;font-weight:500;color:#64748b;">2 of 3 cached</span></div>
-                    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;font-size:10px;font-weight:700;color:#94a3b8;text-transform:uppercase;padding:4px 8px;border-bottom:1.5px solid #e2e8f0;"><span>Assignment</span><span>Class</span><span>Due Date</span><span>Status</span></div>
-                    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;font-size:10.5px;color:#334155;padding:8px;border-bottom:1px solid #f1f5f9;align-items:center;"><span style="font-weight:600;">Lab 4: Binary Search Trees</span><span>CS 101</span><span>Fri Sep 18</span><span style="font-size:9.5px;font-weight:700;background:#f1f5f9;border:1.2px solid #94a3b8;border-radius:4px;padding:2px 6px;display:inline-block;">Draft Saved</span></div>
-                    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;font-size:10.5px;color:#94a3b8;padding:8px;border-bottom:1px solid #f1f5f9;align-items:center;background:#f8fafc;"><span style="font-weight:600;">Project 1: SQL Database API</span><span>CS 101</span><span>Mon Sep 22</span><span style="font-size:9.5px;font-weight:700;background:#f1f5f9;border:1.2px dashed #cbd5e1;border-radius:4px;padding:2px 6px;display:inline-block;">Not Cached</span></div>
-                    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;font-size:10.5px;color:#334155;padding:8px;border-bottom:1px solid #f1f5f9;align-items:center;"><span style="font-weight:600;">Quiz 3: Big-O Complexity</span><span>CS 102</span><span>Wed Sep 17</span><span style="font-size:9.5px;font-weight:700;background:#f1f5f9;border:1.2px solid #94a3b8;border-radius:4px;padding:2px 6px;display:inline-block;">Cached</span></div>
-                    <div style="font-size:9.5px;color:#94a3b8;text-align:center;margin-top:8px;">Drafts will auto-submit when you're back online</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 2: Group Chat + Teacher Dashboard -->
-          <h3 style="font-size:15px; font-weight:600; color:#64748b; margin-top:20px;">Group chat &amp; Teacher view</h3>
-          <div class="wireframes-row desktop-row">
-
-            <!-- DESKTOP 3: Group Chat -->
-            <div class="wireframe-column">
-              <h3 class="wireframe-subtitle">Group Chat</h3>
-              <div class="desktop-wireframe">
-                <div class="app-topnav">
-                  <div class="app-topnav-logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg> Classroom</div>
-                  <div class="app-topnav-search"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg> Search messages...</div>
-                  <div class="app-topnav-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="#64748b"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div>
-                </div>
-                <div class="desktop-app-body">
-                  <div class="desktop-sidebar" style="width:160px;">
-                    <div class="sidebar-section-label">Group Chats</div>
-                    <div class="sidebar-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Team Alpha</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Team Beta</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Team Gamma</div>
-                    <div class="sidebar-section-label">Direct</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg> Prof. Santos</div>
-                  </div>
-                  <div class="desktop-main" style="gap:8px;">
-                    <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f1f5f9;padding-bottom:8px;">
-                      <div><div style="font-size:12px;font-weight:700;color:#0f172a;">Team Alpha — Database Project</div><div style="font-size:10px;color:#64748b;">4 members • CS 101</div></div>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-                    </div>
-                    <div class="desktop-chat-panel">
-                      <div class="desktop-chat-msg"><div class="app-topnav-avatar"><svg width="11" height="11" viewBox="0 0 24 24" fill="#64748b"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div><div><div class="desktop-bubble recv">Does anyone have the GitHub repo link?</div><div style="font-size:9px;color:#94a3b8;margin-top:2px;">Alex · 3:26 PM</div></div></div>
-                      <div class="desktop-chat-msg right"><div><div class="desktop-bubble sent">Here's the branch with starter code.</div><div style="font-size:9px;color:#94a3b8;margin-top:2px;text-align:right;">You · 3:27 PM</div></div></div>
-                      <div class="desktop-chat-msg"><div class="app-topnav-avatar"><svg width="11" height="11" viewBox="0 0 24 24" fill="#64748b"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div><div><div style="display:flex;align-items:center;gap:5px;border:1px solid #e2e8f0;border-radius:8px;padding:5px 8px;background:#fff;font-size:10px;color:#334155;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>starter_code.py</div><div style="font-size:9px;color:#94a3b8;margin-top:2px;">Mia · 3:28 PM</div></div></div>
-                      <div class="desktop-chat-msg right"><div><div class="desktop-bubble recv" style="font-style:italic;font-size:9.5px;color:#94a3b8;">typing...</div></div></div>
-                    </div>
-                    <div class="desktop-chat-input"><span>Type a message...</span><div style="display:flex;gap:6px;align-items:center;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- DESKTOP 4: Teacher Dashboard -->
-            <div class="wireframe-column">
-              <h3 class="wireframe-subtitle">Teacher Dashboard</h3>
-              <div class="desktop-wireframe">
-                <div class="app-topnav">
-                  <div class="app-topnav-logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg> Classroom <span style="font-size:10px;color:#64748b;font-weight:500;margin-left:4px;">— Teacher</span></div>
-                  <div class="app-topnav-search"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg> Search students, classes...</div>
-                  <div class="app-topnav-avatar" style="background:#94a3b8;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div>
-                </div>
-                <div class="desktop-app-body">
-                  <div class="desktop-sidebar">
-                    <div class="sidebar-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> Dashboard</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> Assignments</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Chat Oversight</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg> Students</div>
-                    <div class="sidebar-section-label">Classes</div>
-                    <div class="sidebar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> CS 101 · Sec A</div>
-                  </div>
-                  <div class="desktop-main">
-                    <div style="display:flex;align-items:center;justify-content:space-between;">
-                      <div><div style="font-size:13px;font-weight:700;color:#0f172a;">CS 101: Intro to Computer Science</div><div style="font-size:10px;color:#64748b;">42 Students • Section A • 88% Turned In</div></div>
-                      <span style="font-size:10px;font-weight:700;border:1.2px solid #94a3b8;border-radius:4px;padding:3px 8px;background:#f1f5f9;cursor:pointer;">+ New Assignment</span>
-                    </div>
-                    <div class="desktop-stat-grid" style="grid-template-columns:repeat(3,1fr);">
-                      <div class="desktop-stat-card"><div class="desktop-stat-val">37/42</div><div class="desktop-stat-label">Lab 4 Submitted</div></div>
-                      <div class="desktop-stat-card"><div class="desktop-stat-val">28/42</div><div class="desktop-stat-label">Project 1 Submitted</div></div>
-                      <div class="desktop-stat-card"><div class="desktop-stat-val">2</div><div class="desktop-stat-label">Students At Risk</div></div>
-                    </div>
-                    <div class="desktop-two-col">
-                      <div class="desktop-card">
-                        <div class="desktop-card-title">Assignments Progress</div>
-                        <div><div style="display:flex;justify-content:space-between;font-size:10.5px;margin-bottom:3px;"><span>Lab 4: Binary Search Trees</span><span style="color:#64748b;">37/42 (88%)</span></div><div class="desktop-progress-track"><div class="desktop-progress-fill" style="width:88%"></div></div></div>
-                        <div><div style="display:flex;justify-content:space-between;font-size:10.5px;margin-bottom:3px;"><span>Project 1: SQL Database API</span><span style="color:#64748b;">28/42 (66%)</span></div><div class="desktop-progress-track"><div class="desktop-progress-fill" style="width:66%"></div></div></div>
-                        <div class="desktop-card-title" style="margin-top:4px;">Group Chat Activity</div>
-                        <div class="desktop-table-row"><span><strong>Team Alpha</strong> — Database</span><span style="font-weight:700;color:#0f172a;">42 msgs · Active</span></div>
-                        <div class="desktop-table-row"><span><strong>Team Beta</strong> — API Backend</span><span>18 msgs · Moderate</span></div>
-                        <div class="desktop-table-row"><span><strong>Team Gamma</strong> — Frontend</span><span style="color:#94a3b8;">3 msgs · Low ⚠</span></div>
+                    <!-- Storage & Sync Header Row -->
+                    <div class="desktop-banner-row">
+                      <div style="display:flex; align-items:center; gap:12px;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                        <div>
+                          <div style="font-size:13px; font-weight:700; color:#0f172a;">Offline Assignments Workspace</div>
+                          <div style="font-size:10.5px; color:#64748b;">2 assignments &amp; 1 quiz downloaded • Auto-syncs when online</div>
+                        </div>
                       </div>
-                      <div class="desktop-card">
-                        <div class="desktop-card-title">Students Falling Behind</div>
-                        <div class="desktop-alert-row"><div><div style="font-size:11px;font-weight:700;color:#0f172a;">Alex Rivera</div><div style="font-size:9.5px;color:#64748b;">Missing Lab 3 &amp; 4 · Inactive 5 days</div></div><button class="mini-btn">Remind</button></div>
-                        <div class="desktop-alert-row" style="margin-top:6px;"><div><div style="font-size:11px;font-weight:700;color:#0f172a;">Mia Chen</div><div style="font-size:9.5px;color:#64748b;">Project 1 not started · Grade: 58%</div></div><button class="mini-btn">Remind</button></div>
+                      <div style="display:flex; gap:8px;">
+                        <button class="desktop-btn">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                          Force Sync
+                        </button>
+                        <button class="desktop-btn primary">⬇ Download Next 2 Deadlines</button>
+                      </div>
+                    </div>
+
+                    <!-- Full Desktop Data Table -->
+                    <table class="desktop-data-table">
+                      <thead>
+                        <tr>
+                          <th style="width:30%;">Assignment Title &amp; Topic</th>
+                          <th style="width:14%;">Course</th>
+                          <th style="width:18%;">Due Date</th>
+                          <th style="width:16%;">Offline Cache</th>
+                          <th style="width:12%;">Status</th>
+                          <th style="width:10%; text-align:right;">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div style="font-weight:700; color:#0f172a;">Lab 4: Binary Search Trees</div>
+                            <div style="font-size:9.5px; color:#64748b;">Insert, search &amp; delete BST algorithms</div>
+                          </td>
+                          <td><span style="font-weight:600;">CS 101</span></td>
+                          <td>
+                            <div style="font-weight:600;">Fri, Sep 18</div>
+                            <div style="font-size:9.5px; color:#64748b;">11:59 PM (In 2 days)</div>
+                          </td>
+                          <td>
+                            <span style="font-size:10px; font-weight:700; color:#0f172a; display:inline-flex; align-items:center; gap:4px;">
+                              <span style="width:7px; height:7px; border-radius:50%; background:#10b981;"></span>
+                              Cached (2.4 MB)
+                            </span>
+                          </td>
+                          <td>
+                            <span style="font-size:9.5px; font-weight:700; border:1.2px solid var(--wireframe-stroke); border-radius:4px; padding:2px 6px; background:#f1f5f9;">Draft Saved</span>
+                          </td>
+                          <td style="text-align:right;">
+                            <button class="desktop-btn primary">Edit Draft</button>
+                          </td>
+                        </tr>
+
+                        <tr style="background:#fcfcfc;">
+                          <td>
+                            <div style="font-weight:700; color:#64748b;">Project 1: SQL Database API</div>
+                            <div style="font-size:9.5px; color:#94a3b8;">RESTful backend with SQLite wrapper</div>
+                          </td>
+                          <td><span style="color:#64748b;">CS 101</span></td>
+                          <td>
+                            <div style="color:#64748b;">Mon, Sep 22</div>
+                            <div style="font-size:9.5px; color:#94a3b8;">11:59 PM</div>
+                          </td>
+                          <td>
+                            <span style="font-size:10px; color:#94a3b8; display:inline-flex; align-items:center; gap:4px;">
+                              <span style="width:7px; height:7px; border-radius:50%; background:#cbd5e1;"></span>
+                              Not Cached
+                            </span>
+                          </td>
+                          <td>
+                            <span style="font-size:9.5px; color:#94a3b8; border:1.2px dashed #cbd5e1; border-radius:4px; padding:2px 6px; background:#f8fafc;">Not Started</span>
+                          </td>
+                          <td style="text-align:right;">
+                            <button class="desktop-btn">⬇ Download</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div style="font-weight:700; color:#0f172a;">Quiz 3: Big-O Complexity</div>
+                            <div style="font-size:9.5px; color:#64748b;">15 Multiple choice &amp; algorithmic proofs</div>
+                          </td>
+                          <td><span style="font-weight:600;">CS 102</span></td>
+                          <td>
+                            <div style="font-weight:600;">Wed, Sep 17</div>
+                            <div style="font-size:9.5px; color:#64748b;">8:00 AM</div>
+                          </td>
+                          <td>
+                            <span style="font-size:10px; font-weight:700; color:#0f172a; display:inline-flex; align-items:center; gap:4px;">
+                              <span style="width:7px; height:7px; border-radius:50%; background:#10b981;"></span>
+                              Cached (850 KB)
+                            </span>
+                          </td>
+                          <td>
+                            <span style="font-size:9.5px; font-weight:700; border:1.2px solid #94a3b8; border-radius:4px; padding:2px 6px; background:#fff;">Ready</span>
+                          </td>
+                          <td style="text-align:right;">
+                            <button class="desktop-btn">Take Quiz</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div style="font-weight:700; color:#0f172a;">Homework 2: Graph Theory</div>
+                            <div style="font-size:9.5px; color:#64748b;">Dijkstra and BFS/DFS analysis</div>
+                          </td>
+                          <td><span style="font-weight:600;">CS 102</span></td>
+                          <td>
+                            <div>Mon, Sep 08</div>
+                            <div style="font-size:9.5px; color:#64748b;">Graded</div>
+                          </td>
+                          <td>
+                            <span style="font-size:10px; color:#64748b;">Cached</span>
+                          </td>
+                          <td>
+                            <span style="font-size:9.5px; font-weight:700; color:#166534; border:1.2px solid #86efac; border-radius:4px; padding:2px 6px; background:#f0fdf4;">94 / 100</span>
+                          </td>
+                          <td style="text-align:right;">
+                            <button class="desktop-btn">View Rubric</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div style="display:flex; justify-content:space-between; align-items:center; font-size:10.5px; color:#64748b; padding:4px 2px;">
+                      <span>Showing 4 of 6 assignments • 1 draft queued for cloud synchronization</span>
+                      <span>Next auto-sync attempt: When network connection is detected</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DESKTOP 3: Group Chat Collaboration Suite (3-Pane Workspace) -->
+            <div class="wireframe-column desktop-col">
+              <h3 class="wireframe-subtitle">Group Project Chat &amp; Collaboration (3-Pane Desktop Workspace)</h3>
+              <div class="desktop-wireframe">
+                <!-- OS Window Chrome -->
+                <div class="window-titlebar">
+                  <div class="window-controls">
+                    <span class="win-dot close"></span>
+                    <span class="win-dot min"></span>
+                    <span class="win-dot max"></span>
+                  </div>
+                  <div class="browser-tabs">
+                    <div class="browser-tab">
+                      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                      <span>Classroom — # team-alpha-db</span>
+                      <span class="tab-close">✕</span>
+                    </div>
+                    <div class="browser-new-tab">+</div>
+                  </div>
+                </div>
+
+                <!-- Browser URL Bar -->
+                <div class="browser-navbar">
+                  <div class="browser-nav-btns">
+                    <button class="browser-nav-btn">‹</button>
+                    <button class="browser-nav-btn">›</button>
+                    <button class="browser-nav-btn">↻</button>
+                  </div>
+                  <div class="browser-url-bar">
+                    <svg class="url-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span class="url-text">https://classroom.edu/groups/cs101/team-alpha-database</span>
+                  </div>
+                  <div class="browser-actions">
+                    <span>★</span>
+                    <span>🧩</span>
+                  </div>
+                </div>
+
+                <!-- App Top Bar -->
+                <div class="app-topnav">
+                  <div class="app-topnav-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    <span>Classroom Chat</span>
+                  </div>
+                  <div class="app-topnav-search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <span>Search messages, shared files, snippets...</span>
+                    <span class="search-shortcut">⌘K</span>
+                  </div>
+                  <div class="app-topnav-right">
+                    <div class="app-topnav-badge">
+                      <span class="sync-dot"></span>
+                      <span>Connected</span>
+                    </div>
+                    <div class="app-topnav-avatar">
+                      <div class="avatar-img-circle">RS</div>
+                      <span>Rhea Solomon</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3-Pane Desktop Chat Layout -->
+                <div class="desktop-chat-workspace">
+                  <!-- Pane 1: Channels & Teams Sidebar -->
+                  <div class="chat-pane-channels">
+                    <div style="font-size:10px; font-weight:700; color:#94a3b8; text-transform:uppercase; letter-spacing:0.5px; padding:4px 6px;">Project Channels</div>
+                    
+                    <div class="sidebar-item active" style="padding:6px 8px;">
+                      <span style="font-weight:700; color:#0f172a;"># team-alpha-db</span>
+                      <span class="sidebar-badge">4</span>
+                    </div>
+                    <div class="sidebar-item" style="padding:6px 8px;">
+                      <span># team-beta-api</span>
+                    </div>
+                    <div class="sidebar-item" style="padding:6px 8px;">
+                      <span># general-cs101</span>
+                    </div>
+
+                    <div style="font-size:10px; font-weight:700; color:#94a3b8; text-transform:uppercase; letter-spacing:0.5px; padding:10px 6px 4px;">Direct Messages</div>
+                    <div class="sidebar-item" style="padding:6px 8px;">
+                      <span style="width:7px; height:7px; border-radius:50%; background:#10b981;"></span>
+                      <span>Prof. Santos (Teacher)</span>
+                    </div>
+                    <div class="sidebar-item" style="padding:6px 8px;">
+                      <span style="width:7px; height:7px; border-radius:50%; background:#10b981;"></span>
+                      <span>Alex Rivera</span>
+                    </div>
+                    <div class="sidebar-item" style="padding:6px 8px;">
+                      <span style="width:7px; height:7px; border-radius:50%; background:#10b981;"></span>
+                      <span>Mia Chen</span>
+                    </div>
+                  </div>
+
+                  <!-- Pane 2: Center Main Chat Stream -->
+                  <div class="chat-pane-main">
+                    <!-- Channel Header -->
+                    <div class="chat-pane-header">
+                      <div>
+                        <div style="font-size:13px; font-weight:700; color:#0f172a;"># team-alpha — Database Project</div>
+                        <div style="font-size:10.5px; color:#64748b;">CS 101 • 4 members • Topic: SQLite connector &amp; indexing</div>
+                      </div>
+                      <div style="display:flex; gap:8px;">
+                        <button class="desktop-btn">📌 2 Pins</button>
+                        <button class="desktop-btn">📁 Files (3)</button>
+                      </div>
+                    </div>
+
+                    <!-- Messages Feed -->
+                    <div class="chat-pane-messages">
+                      <!-- Message 1 -->
+                      <div class="desktop-chat-msg">
+                        <div class="avatar-circle" style="background:#cbd5e1; width:28px; height:28px; font-size:11px;">AR</div>
+                        <div style="flex:1;">
+                          <div style="display:flex; align-items:center; gap:8px;">
+                            <strong style="font-size:11.5px; color:#0f172a;">Alex Rivera</strong>
+                            <span style="font-size:9.5px; color:#94a3b8;">3:26 PM</span>
+                          </div>
+                          <div class="desktop-bubble recv" style="margin-top:3px; max-width:85%;">
+                            Does anyone have the starter code and GitHub repo link for the BST indexing module?
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Message 2 (You) -->
+                      <div class="desktop-chat-msg right">
+                        <div class="avatar-circle" style="background:#334155; color:#fff; width:28px; height:28px; font-size:11px;">RS</div>
+                        <div style="flex:1; display:flex; flex-direction:column; align-items:flex-end;">
+                          <div style="display:flex; align-items:center; gap:8px;">
+                            <span style="font-size:9.5px; color:#94a3b8;">3:27 PM</span>
+                            <strong style="font-size:11.5px; color:#0f172a;">You (Rhea)</strong>
+                          </div>
+                          <div class="desktop-bubble sent" style="margin-top:3px; max-width:85%;">
+                            Here is the branch with starter code and schema setup:
+                          </div>
+                          <!-- Code file attachment preview -->
+                          <div style="margin-top:6px; border:1.5px solid var(--wireframe-stroke); border-radius:6px; padding:6px 10px; background:#fff; display:flex; align-items:center; gap:8px; font-size:11px; color:#0f172a;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            <div>
+                              <div style="font-weight:700;">starter_code.py</div>
+                              <div style="font-size:9px; color:#64748b;">Python 3.11 • 14.2 KB</div>
+                            </div>
+                            <button class="desktop-btn" style="margin-left:12px; padding:2px 6px; font-size:9.5px;">Download</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Message 3 -->
+                      <div class="desktop-chat-msg">
+                        <div class="avatar-circle" style="background:#e2e8f0; width:28px; height:28px; font-size:11px;">MC</div>
+                        <div style="flex:1;">
+                          <div style="display:flex; align-items:center; gap:8px;">
+                            <strong style="font-size:11.5px; color:#0f172a;">Mia Chen</strong>
+                            <span style="font-size:9.5px; color:#94a3b8;">3:28 PM</span>
+                          </div>
+                          <div class="desktop-bubble recv" style="margin-top:3px; max-width:85%;">
+                            Awesome, thanks Rhea! I'll test the B-Tree search operations locally offline.
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Typing Indicator -->
+                      <div style="font-size:10px; font-style:italic; color:#94a3b8; display:flex; align-items:center; gap:4px; padding:2px 0;">
+                        <span>Alex is typing...</span>
+                      </div>
+                    </div>
+
+                    <!-- Message Composer -->
+                    <div class="chat-pane-composer">
+                      <div class="chat-composer-toolbar">
+                        <strong>B</strong> <em>I</em> <strike>S</strike> &lt;/&gt; 🔗 📎 😀
+                      </div>
+                      <div class="chat-composer-input">
+                        <span>Type a message to #team-alpha-db... (Press Enter to send)</span>
+                        <button class="desktop-btn primary" style="padding:4px 10px;">Send ✈</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pane 3: Right Drawer Details -->
+                  <div class="chat-pane-drawer">
+                    <div>
+                      <div style="font-size:11px; font-weight:700; color:#0f172a; margin-bottom:6px;">Project Overview</div>
+                      <div style="font-size:10px; color:#64748b; line-height:1.4;">
+                        Milestone 1 due Sep 22 • 3 of 5 tasks completed (60%)
+                      </div>
+                      <div class="desktop-progress-track" style="margin-top:6px; height:5px;">
+                        <div class="desktop-progress-fill" style="width:60%;"></div>
+                      </div>
+                    </div>
+
+                    <div style="border-top:1px dashed #cbd5e1; padding-top:8px;">
+                      <div style="font-size:11px; font-weight:700; color:#0f172a; margin-bottom:6px;">Team Members (4)</div>
+                      <div style="display:flex; flex-direction:column; gap:6px; font-size:10.5px; color:#334155;">
+                        <div style="display:flex; align-items:center; gap:6px;"><span style="width:6px; height:6px; border-radius:50%; background:#10b981;"></span> Alex Rivera (Lead)</div>
+                        <div style="display:flex; align-items:center; gap:6px;"><span style="width:6px; height:6px; border-radius:50%; background:#10b981;"></span> Mia Chen (Testing)</div>
+                        <div style="display:flex; align-items:center; gap:6px;"><span style="width:6px; height:6px; border-radius:50%; background:#10b981;"></span> Rhea Solomon (You)</div>
+                        <div style="display:flex; align-items:center; gap:6px;"><span style="width:6px; height:6px; border-radius:50%; background:#94a3b8;"></span> Jaynard M. (Offline)</div>
+                      </div>
+                    </div>
+
+                    <div style="border-top:1px dashed #cbd5e1; padding-top:8px;">
+                      <div style="font-size:11px; font-weight:700; color:#0f172a; margin-bottom:4px;">Shared Resources</div>
+                      <div style="font-size:9.5px; color:#64748b; display:flex; flex-direction:column; gap:4px;">
+                        <div>📄 starter_code.py (14 KB)</div>
+                        <div>📊 schema_v1.sql (4 KB)</div>
+                        <div>📐 architecture.png (1.2 MB)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DESKTOP 4: Teacher Dashboard & Analytics Command Center -->
+            <div class="wireframe-column desktop-col">
+              <h3 class="wireframe-subtitle">Teacher Analytics &amp; Chat Oversight Command Center (Widescreen Desktop View)</h3>
+              <div class="desktop-wireframe">
+                <!-- OS Window Chrome -->
+                <div class="window-titlebar">
+                  <div class="window-controls">
+                    <span class="win-dot close"></span>
+                    <span class="win-dot min"></span>
+                    <span class="win-dot max"></span>
+                  </div>
+                  <div class="browser-tabs">
+                    <div class="browser-tab">
+                      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                      <span>Classroom — Teacher Command Center</span>
+                      <span class="tab-close">✕</span>
+                    </div>
+                    <div class="browser-new-tab">+</div>
+                  </div>
+                </div>
+
+                <!-- Browser URL Bar -->
+                <div class="browser-navbar">
+                  <div class="browser-nav-btns">
+                    <button class="browser-nav-btn">‹</button>
+                    <button class="browser-nav-btn">›</button>
+                    <button class="browser-nav-btn">↻</button>
+                  </div>
+                  <div class="browser-url-bar">
+                    <svg class="url-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span class="url-text">https://classroom.edu/teacher/cs101/analytics-oversight</span>
+                  </div>
+                  <div class="browser-actions">
+                    <span>★</span>
+                    <span>🧩</span>
+                  </div>
+                </div>
+
+                <!-- Desktop App Top Navigation -->
+                <div class="app-topnav">
+                  <div class="app-topnav-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    <span>Classroom <span style="font-size:11px; font-weight:600; color:#64748b; margin-left:4px;">— Teacher Portal</span></span>
+                  </div>
+                  <div class="app-topnav-search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <span>Search students, rubrics, team submissions...</span>
+                    <span class="search-shortcut">⌘K</span>
+                  </div>
+                  <div class="app-topnav-right">
+                    <div class="app-topnav-badge" style="background:#e0f2fe; border-color:#0284c7; color:#0369a1;">
+                      <span>Section A (42 Students)</span>
+                    </div>
+                    <div class="app-topnav-avatar">
+                      <div class="avatar-img-circle" style="background:#334155; color:#fff;">JD</div>
+                      <span>Prof. Jacob Desello</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Desktop App Body -->
+                <div class="desktop-app-body">
+                  <!-- Sidebar -->
+                  <div class="desktop-sidebar">
+                    <div class="sidebar-section-label">Instructor Views</div>
+                    <div class="sidebar-item active">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                      <span>Analytics Overview</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+                      <span>Assignments</span>
+                      <span class="sidebar-badge">4</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                      <span>Chat Oversight</span>
+                      <span class="sidebar-badge" style="background:#fee2e2; border-color:#ef4444; color:#991b1b;">1 Alert</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                      <span>Student Roster (42)</span>
+                    </div>
+
+                    <div class="sidebar-section-label">Teaching Classes</div>
+                    <div class="sidebar-item">
+                      <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#3b82f6;"></span>
+                      <span>CS 101: Sec A</span>
+                    </div>
+                    <div class="sidebar-item">
+                      <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#64748b;"></span>
+                      <span>CS 101: Sec B</span>
+                    </div>
+                  </div>
+
+                  <!-- Main Content Area -->
+                  <div class="desktop-main">
+                    <!-- Header Banner -->
+                    <div class="desktop-banner-row">
+                      <div>
+                        <div style="font-size:14px; font-weight:700; color:#0f172a;">CS 101: Intro to Computer Science — Section A</div>
+                        <div style="font-size:11px; color:#64748b; margin-top:2px;">42 Enrolled • Fall 2026 • 88% overall submission completion rate</div>
+                      </div>
+                      <div style="display:flex; gap:8px;">
+                        <button class="desktop-btn">📊 Export Gradebook</button>
+                        <button class="desktop-btn primary">+ Create Assignment</button>
+                      </div>
+                    </div>
+
+                    <!-- 4 Metric Cards Grid -->
+                    <div class="desktop-stat-grid">
+                      <div class="desktop-stat-card">
+                        <div class="desktop-stat-val">37 / 42</div>
+                        <div class="desktop-stat-label">Lab 4 Submitted (88%)</div>
+                        <div class="desktop-stat-sub">5 pending student drafts</div>
+                      </div>
+                      <div class="desktop-stat-card">
+                        <div class="desktop-stat-val">28 / 42</div>
+                        <div class="desktop-stat-label">Project 1 Started (66%)</div>
+                        <div class="desktop-stat-sub">Milestone 1 due in 6 days</div>
+                      </div>
+                      <div class="desktop-stat-card">
+                        <div class="desktop-stat-val" style="color:#b91c1c;">2 Students</div>
+                        <div class="desktop-stat-label">Falling Behind</div>
+                        <div class="desktop-stat-sub">Urgent intervention needed</div>
+                      </div>
+                      <div class="desktop-stat-card">
+                        <div class="desktop-stat-val">3 Teams</div>
+                        <div class="desktop-stat-label">Active Team Chats</div>
+                        <div class="desktop-stat-sub">63 total messages today</div>
+                      </div>
+                    </div>
+
+                    <!-- 2-Column Wide Analytics & Oversight Grid -->
+                    <div class="desktop-two-col equal">
+                      <!-- Left Column: Submission Progress & Chat Velocity -->
+                      <div style="display:flex; flex-direction:column; gap:14px;">
+                        <div class="desktop-card">
+                          <div class="desktop-card-title">
+                            <span>Class Submission Progress</span>
+                            <span style="font-size:10px; color:#64748b; font-weight:500;">Active Tasks</span>
+                          </div>
+
+                          <div>
+                            <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:4px;">
+                              <span style="font-weight:600;">Lab 4: Binary Search Trees</span>
+                              <span style="font-weight:700;">37/42 (88%)</span>
+                            </div>
+                            <div class="desktop-progress-track">
+                              <div class="desktop-progress-fill" style="width:88%;"></div>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:4px;">
+                              <span style="font-weight:600;">Project 1: SQL Database API</span>
+                              <span style="font-weight:700;">28/42 (66%)</span>
+                            </div>
+                            <div class="desktop-progress-track">
+                              <div class="desktop-progress-fill" style="width:66%;"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Group Project Chat Oversight Table -->
+                        <div class="desktop-card">
+                          <div class="desktop-card-title">
+                            <span>Group Project Chat Oversight &amp; Velocity</span>
+                            <span style="font-size:10px; color:#3b82f6; font-weight:600; cursor:pointer;">View All (3) ›</span>
+                          </div>
+
+                          <div class="desktop-table-row">
+                            <div>
+                              <strong style="color:#0f172a;">Team Alpha — Database</strong>
+                              <div style="font-size:9.5px; color:#64748b;">4 members • Last message 2m ago</div>
+                            </div>
+                            <span style="font-size:10px; font-weight:700; color:#166534; background:#dcfce7; border:1px solid #86efac; border-radius:4px; padding:2px 6px;">42 msgs · Active</span>
+                          </div>
+
+                          <div class="desktop-table-row">
+                            <div>
+                              <strong style="color:#0f172a;">Team Beta — API Backend</strong>
+                              <div style="font-size:9.5px; color:#64748b;">4 members • Last message 1h ago</div>
+                            </div>
+                            <span style="font-size:10px; font-weight:600; color:#334155; background:#f1f5f9; border:1px solid #cbd5e1; border-radius:4px; padding:2px 6px;">18 msgs · Moderate</span>
+                          </div>
+
+                          <div class="desktop-table-row">
+                            <div>
+                              <strong style="color:#b91c1c;">Team Gamma — Frontend UI</strong>
+                              <div style="font-size:9.5px; color:#64748b;">4 members • No activity for 3 days</div>
+                            </div>
+                            <span style="font-size:10px; font-weight:700; color:#991b1b; background:#fee2e2; border:1px solid #fca5a5; border-radius:4px; padding:2px 6px;">3 msgs · Inactive ⚠</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Right Column: At-Risk Students & Notification Rules -->
+                      <div style="display:flex; flex-direction:column; gap:14px;">
+                        <div class="desktop-card">
+                          <div class="desktop-card-title">
+                            <span>Students Falling Behind (2)</span>
+                            <span style="font-size:10px; font-weight:700; color:#b91c1c;">Action Required</span>
+                          </div>
+
+                          <!-- Student 1 -->
+                          <div style="border:1.5px solid var(--wireframe-stroke); border-radius:6px; padding:10px; background:#fef2f2; display:flex; justify-content:space-between; align-items:center;">
+                            <div>
+                              <div style="font-weight:700; font-size:11.5px; color:#991b1b;">Alex Rivera</div>
+                              <div style="font-size:10px; color:#64748b; margin-top:2px;">Missing Lab 3 &amp; 4 • Inactive 5 days • Grade: 61%</div>
+                            </div>
+                            <div style="display:flex; gap:4px;">
+                              <button class="desktop-btn" style="padding:3px 7px; font-size:9.5px;">Remind</button>
+                              <button class="desktop-btn primary" style="padding:3px 7px; font-size:9.5px;">Message</button>
+                            </div>
+                          </div>
+
+                          <!-- Student 2 -->
+                          <div style="border:1.5px solid var(--wireframe-stroke); border-radius:6px; padding:10px; background:#fffbeb; display:flex; justify-content:space-between; align-items:center;">
+                            <div>
+                              <div style="font-weight:700; font-size:11.5px; color:#92400e;">Mia Chen</div>
+                              <div style="font-size:10px; color:#64748b; margin-top:2px;">Project 1 not started • Grade: 58% • Offline 3 days</div>
+                            </div>
+                            <div style="display:flex; gap:4px;">
+                              <button class="desktop-btn" style="padding:3px 7px; font-size:9.5px;">Remind</button>
+                              <button class="desktop-btn primary" style="padding:3px 7px; font-size:9.5px;">Office Hours</button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Automated Intervention Rules Panel -->
+                        <div class="desktop-card">
+                          <div class="desktop-card-title">
+                            <span>Automated Oversight Alert Rules</span>
+                          </div>
+
+                          <div class="desktop-table-row">
+                            <span style="font-size:10.5px; font-weight:600;">Alert if team has &lt;5 msgs 48h before due date</span>
+                            <span style="font-size:9.5px; font-weight:700; background:#0f172a; color:#fff; border-radius:4px; padding:2px 6px;">ON</span>
+                          </div>
+
+                          <div class="desktop-table-row">
+                            <span style="font-size:10.5px; font-weight:600;">Flag student missing 2+ consecutive submissions</span>
+                            <span style="font-size:9.5px; font-weight:700; background:#0f172a; color:#fff; border-radius:4px; padding:2px 6px;">ON</span>
+                          </div>
+
+                          <div style="font-size:9.5px; color:#64748b; line-height:1.4; margin-top:2px;">
+                            Notifications automatically dispatch reminder emails and queue teacher intervention cards.
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
