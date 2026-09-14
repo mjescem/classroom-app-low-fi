@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom app - Polished Wireframes</title>
+  <meta name="description" content="Classroom app - Polished Wireframes grayscale low-fi prototype board">
+  <link rel="stylesheet" href="css/excalidraw.css">
+</head>
+<body>
+
+  <!-- Excalidraw Infinite Canvas Viewport -->
+  <div id="canvasViewport">
+    <div id="canvasContent">
+
+      <!-- Top Canvas Header -->
+      <div class="board-header">
+        <h1 class="board-title">Classroom app - Polished Wireframes</h1>
+      </div>
+
+      <!-- Main Wireframes Board -->
+      <main class="wireframes-canvas">
+
+        <!-- ================= 1. STUDENT VIEW ================= -->
+        <section class="section-group">
+          <h2 class="section-header-title">Student view</h2>
+
+          <div class="wireframes-row">
+
+            <!-- PHONE 1: Student Dashboard -->
+            <div class="wireframe-column">
+              <h3 class="wireframe-subtitle">Student Dashboard</h3>
+              <div class="phone-wireframe">
+                
+                <!-- Phone Body -->
+                <div class="phone-body" style="gap: 10px;">
+                  
+                  <!-- 1. Offline Sync Status Indicator (Slide 5 Feature) -->
+                  <div class="sync-status-bar">
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                      <span class="sync-dot"></span>
+                      <strong>Live Synced</strong>
+                    </div>
+                    <span style="color: var(--wireframe-muted); font-size: 10.5px;">📦 3 Cached Docs</span>
+                  </div>
+
+                  <!-- 2. Quick Stat Cards (Completion & Deadline) -->
+                  <div class="student-toggle-cards">
+                    <div class="toggle-card">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 11 12 14 22 4"></polyline>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                      </svg>
+                      <div class="toggle-card-text">
+                        <span class="toggle-card-val">85% Done</span>
+                        <span class="toggle-card-label">12/14 Tasks</span>
+                      </div>
+                    </div>
+                    <div class="toggle-card">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <div class="toggle-card-text">
+                        <span class="toggle-card-val">Tomorrow</span>
+                        <span class="toggle-card-label">Sprint 1 Due</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 3. Assignment Completion Rate Per Class (Slide 5 Feature) -->
+                  <div class="dashed-wireframe-box" style="padding: 10px;">
+                    <div class="metric-title" style="font-size: 13px; margin-bottom: 2px;">Completion Per Class</div>
+                    
+                    <!-- Class 1 -->
+                    <div class="class-progress-item">
+                      <div class="class-progress-header">
+                        <span>CS 101: Intro to CS</span>
+                        <span>90%</span>
+                      </div>
+                      <div class="class-progress-track">
+                        <div class="class-progress-fill" style="width: 90%;"></div>
+                      </div>
+                    </div>
+
+                    <!-- Class 2 -->
+                    <div class="class-progress-item">
+                      <div class="class-progress-header">
+                        <span>CS 102: Data Structures</span>
+                        <span>80%</span>
+                      </div>
+                      <div class="class-progress-track">
+                        <div class="class-progress-fill" style="width: 80%;"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 4. Grade Trends Over Time (Slide 5 Feature) -->
+                  <div class="dashed-wireframe-box" style="padding: 8px 10px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                      <span class="metric-title" style="font-size: 13px;">Grade Trends Over Time</span>
+                      <span style="font-size: 11px; font-weight: 700; color: #334155;">3.8 GPA (A)</span>
+                    </div>
+                    
+                    <svg viewBox="0 0 240 70" style="width: 100%; height: 65px; overflow: visible;">
+                      <!-- Grid lines -->
+                      <line x1="10" y1="15" x2="230" y2="15" stroke="#e2e8f0" stroke-width="1" />
+                      <line x1="10" y1="35" x2="230" y2="35" stroke="#e2e8f0" stroke-width="1" />
+                      <line x1="10" y1="55" x2="230" y2="55" stroke="#cbd5e1" stroke-width="1" />
+                      
+                      <!-- Guide points -->
+                      <circle cx="20" cy="45" r="3" fill="#64748b" />
+                      <circle cx="85" cy="30" r="3" fill="#64748b" />
+                      <circle cx="155" cy="22" r="3" fill="#64748b" />
+                      <circle cx="220" cy="12" r="3.5" fill="#1e293b" />
+
+                      <!-- Trend Line Curve -->
+                      <polyline points="20,45 85,30 155,22 220,12" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      
+                      <!-- Milestone Labels -->
+                      <text x="20" y="66" font-size="8.5" fill="#64748b" text-anchor="middle">Quiz 1 (85%)</text>
+                      <text x="85" y="66" font-size="8.5" fill="#64748b" text-anchor="middle">Lab 2 (90%)</text>
+                      <text x="155" y="66" font-size="8.5" fill="#64748b" text-anchor="middle">Midterm (92%)</text>
+                      <text x="220" y="66" font-size="8.5" fill="#0f172a" font-weight="bold" text-anchor="middle">Lab 3 (96%)</text>
+                    </svg>
+                  </div>
+
+                  <!-- 5. Upcoming Deadlines in Calendar View (Slide 5 Feature) -->
+                  <div>
+                    <div class="metric-title" style="font-size: 13px;">Upcoming Deadlines</div>
+                    
+                    <!-- Mini Week Strip -->
+                    <div class="calendar-strip">
+                      <div class="cal-strip-day">M<br><strong>14</strong></div>
+                      <div class="cal-strip-day active-day">T<br><strong>15</strong></div>
+                      <div class="cal-strip-day">W<br><strong>16</strong></div>
+                      <div class="cal-strip-day">T<br><strong>17</strong></div>
+                      <div class="cal-strip-day has-event">F<br><strong>18</strong><div class="cal-event-dot"></div></div>
+                      <div class="cal-strip-day">S<br><strong>19</strong></div>
+                    </div>
+
+                    <!-- Next Deadline Card -->
+                    <div class="upcoming-task-card">
+                      <div>
+                        <div style="font-size: 11.5px; font-weight: 700; color: #1e293b;">Lab 4: Binary Search Trees</div>
+                        <div style="font-size: 10px; color: var(--wireframe-muted);">CS 101 • Fri 11:59 PM</div>
+                      </div>
+                      <span style="font-size: 10px; font-weight: 700; border: 1.2px solid var(--wireframe-stroke); border-radius: 4px; padding: 2px 6px; background: #f1f5f9;">Draft Saved</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Phone Bottom Navigation -->
+                <div class="phone-bottom-nav">
+                  <div class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="M12 12v-4"/></svg>
+                    <span>Dashboard</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    <span>Assignments</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>Chat</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Settings</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PHONE 2: Offline assignments -->
+            <div class="wireframe-column">
+              <h3 class="wireframe-subtitle">Offline assignments</h3>
+              <div class="phone-wireframe">
+                
+                <div class="phone-body" style="gap: 8px;">
+
+                  <!-- Offline status banner -->
+                  <div class="offline-banner-pill">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="1" y1="1" x2="23" y2="23"></line>
+                      <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+                      <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+                      <path d="M10.71 5.05A16 16 0 0 1 22.56 9"></path>
+                      <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+                      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                      <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                    </svg>
+                    <span>Offline mode</span>
+                    <span style="margin-left: auto; font-size: 10px; color: #64748b;">2 of 3 cached</span>
+                  </div>
+
+                  <!-- Section label -->
+                  <div style="font-size: 10.5px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;">CS 101: Intro to Computer Science</div>
+
+                  <!-- Assignment 1: Available offline, draft in progress -->
+                  <div style="border: 1.5px solid var(--wireframe-stroke); border-radius: 8px; padding: 10px 12px; background: #fff;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                      <div style="flex: 1;">
+                        <div style="font-size: 12px; font-weight: 700; color: #0f172a;">Lab 4: Binary Search Trees</div>
+                        <div style="font-size: 10px; color: var(--wireframe-muted); margin-top: 2px;">Due Fri, Sep 18 • 11:59 PM</div>
+                      </div>
+                      <span style="font-size: 9.5px; font-weight: 700; border: 1.2px solid #94a3b8; border-radius: 4px; padding: 2px 6px; background: #f1f5f9; color: #334155; white-space: nowrap; margin-left: 8px;">Draft Saved</span>
+                    </div>
+                    <div style="font-size: 9.5px; color: #64748b; margin-top: 5px; display: flex; align-items: center; gap: 4px;">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                      Available offline • Tap to continue editing
+                    </div>
+                  </div>
+
+                  <!-- Assignment 2: Not cached / not available offline -->
+                  <div style="border: 1.5px dashed #cbd5e1; border-radius: 8px; padding: 10px 12px; background: #f8fafc;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                      <div style="flex: 1;">
+                        <div style="font-size: 12px; font-weight: 700; color: #64748b;">Project 1: SQL Database API</div>
+                        <div style="font-size: 10px; color: var(--wireframe-muted); margin-top: 2px;">Due Mon, Sep 22 • 11:59 PM</div>
+                      </div>
+                      <span style="font-size: 9.5px; font-weight: 700; border: 1.2px solid #cbd5e1; border-radius: 4px; padding: 2px 6px; background: #f1f5f9; color: #94a3b8; white-space: nowrap; margin-left: 8px;">Not Cached</span>
+                    </div>
+                    <div style="font-size: 9.5px; color: #94a3b8; margin-top: 5px; display: flex; align-items: center; gap: 4px;">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><line x1="2" y1="2" x2="22" y2="22"/><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 0 1 2.5 8.2"/></svg>
+                      Not available offline — connect to download
+                    </div>
+                  </div>
+
+                  <!-- Assignment 3: Available offline, not started -->
+                  <div style="border: 1.5px solid var(--wireframe-stroke); border-radius: 8px; padding: 10px 12px; background: #fff;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                      <div style="flex: 1;">
+                        <div style="font-size: 12px; font-weight: 700; color: #0f172a;">Quiz 3: Big-O Complexity</div>
+                        <div style="font-size: 10px; color: var(--wireframe-muted); margin-top: 2px;">Due Wed, Sep 17 • 8:00 AM</div>
+                      </div>
+                      <span style="font-size: 9.5px; font-weight: 700; border: 1.2px solid #94a3b8; border-radius: 4px; padding: 2px 6px; background: #f1f5f9; color: #334155; white-space: nowrap; margin-left: 8px;">Cached</span>
+                    </div>
+                    <div style="font-size: 9.5px; color: #64748b; margin-top: 5px; display: flex; align-items: center; gap: 4px;">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                      Available offline • Not started yet
+                    </div>
+                  </div>
+
+                  <!-- Sync hint -->
+                  <div style="font-size: 9.5px; color: var(--wireframe-muted); text-align: center; margin-top: 4px;">
+                    Drafts auto-sync when you're back online
+                  </div>
+
+                </div>
+
+                <!-- Phone Bottom Navigation -->
+                <div class="phone-bottom-nav">
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="M12 12v-4"/></svg>
+                    <span>Dashboard</span>
+                  </div>
+                  <div class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    <span>Assignments</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>Chat</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Settings</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PHONE 2b: Offline Assignment Edit Page -->
+            <div class="wireframe-column">
+              <h3 class="wireframe-subtitle">Offline edit view</h3>
+              <div class="phone-wireframe">
+
+                <div class="phone-body" style="gap: 8px;">
+
+                  <!-- Back nav + offline badge -->
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2px;">
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+                      <span style="font-size: 11.5px; font-weight: 600; color: #334155;">Assignments</span>
+                    </div>
+                    <span style="font-size: 10px; font-weight: 700; border: 1.2px solid var(--wireframe-stroke); border-radius: 4px; padding: 2px 6px; background: #f1f5f9; color: #475569;">✈ Offline</span>
+                  </div>
+
+                  <!-- Assignment title -->
+                  <div style="border-bottom: 1.5px solid #e2e8f0; padding-bottom: 6px;">
+                    <div style="font-weight: 700; font-size: 13px; color: #0f172a;">Lab 4: Binary Search Trees</div>
+                    <div style="font-size: 10.5px; color: var(--wireframe-muted); margin-top: 2px;">CS 101 • Due Fri, Sep 18 • 11:59 PM</div>
+                  </div>
+
+                  <!-- Instructions box -->
+                  <div class="dashed-wireframe-box" style="padding: 8px 10px;">
+                    <div style="font-size: 11px; font-weight: 700; color: #334155; margin-bottom: 4px;">Instructions</div>
+                    <div style="font-size: 10.5px; color: var(--wireframe-muted); line-height: 1.5;">
+                      Implement a BST with insert, search, and delete operations. Submit your .py file with test cases.
+                    </div>
+                  </div>
+
+                  <!-- Answer / Text editor area -->
+                  <div style="font-size: 11px; font-weight: 700; color: #334155; margin-bottom: 3px;">Your Answer</div>
+                  <div style="border: 1.5px solid var(--wireframe-stroke); border-radius: 6px; background: #f8fafc; padding: 8px; min-height: 80px; position: relative;">
+                    <!-- Fake text lines -->
+                    <div style="height: 9px; background: #e2e8f0; border-radius: 3px; width: 85%; margin-bottom: 5px;"></div>
+                    <div style="height: 9px; background: #e2e8f0; border-radius: 3px; width: 70%; margin-bottom: 5px;"></div>
+                    <div style="height: 9px; background: #e2e8f0; border-radius: 3px; width: 60%; margin-bottom: 5px;"></div>
+                    <div style="height: 9px; background: #e2e8f0; border-radius: 3px; width: 40%;"></div>
+                    <!-- Cursor blink bar -->
+                    <div style="position: absolute; bottom: 10px; left: 52%; width: 1.5px; height: 10px; background: #334155;"></div>
+                  </div>
+                  <div style="font-size: 9.5px; color: var(--wireframe-muted); text-align: right;">Draft saved locally • 142 words</div>
+
+                  <!-- Attachments row -->
+                  <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                    <!-- Attached file chip -->
+                    <div style="display: flex; align-items: center; gap: 4px; border: 1.2px solid var(--wireframe-stroke); border-radius: 4px; padding: 3px 7px; background: #f1f5f9; font-size: 10px;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                      bst_solution.py
+                    </div>
+                    <!-- Add file button -->
+                    <div style="display: flex; align-items: center; gap: 4px; border: 1.2px dashed #94a3b8; border-radius: 4px; padding: 3px 7px; font-size: 10px; color: #64748b;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                      Attach file
+                    </div>
+                  </div>
+
+                  <!-- Action buttons -->
+                  <div style="display: flex; gap: 8px; margin-top: 4px;">
+                    <button style="flex: 1; padding: 7px; border: 1.5px solid var(--wireframe-stroke); border-radius: 6px; background: #f1f5f9; font-size: 11px; font-weight: 600; color: #475569; cursor: pointer;">Save Draft</button>
+                    <button style="flex: 1; padding: 7px; border: 1.5px solid #64748b; border-radius: 6px; background: #e2e8f0; font-size: 11px; font-weight: 700; color: #1e293b; cursor: pointer;">Submit when Online</button>
+                  </div>
+
+                  <!-- Sync note -->
+                  <div style="font-size: 9.5px; color: var(--wireframe-muted); text-align: center; padding: 2px 0;">
+                    Will auto-submit once connection is restored
+                  </div>
+
+                </div>
+
+                <!-- Phone Bottom Navigation -->
+                <div class="phone-bottom-nav">
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="M12 12v-4"/></svg>
+                    <span>Dashboard</span>
+                  </div>
+                  <div class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    <span>Assignments</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>Chat</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Settings</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PHONE 3: Group chat -->
+            <div class="wireframe-column">
+              <h3 class="wireframe-subtitle">Group chat</h3>
+              <div class="phone-wireframe">
+                
+                <!-- Phone Body: Chat Bubbles -->
+                <div class="phone-body">
+                  <div class="chat-bubbles-flow">
+                    
+                    <!-- Bubble 1 (Left Gray) -->
+                    <div class="chat-row">
+                      <div class="avatar-circle img-avatar" style="width:24px; height:24px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#64748b"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+                      </div>
+                      <div class="bubble gray">
+                        Does anyone have the GitHub repo link?
+                      </div>
+                    </div>
+
+                    <!-- Bubble 2 (Right Dark Gray) -->
+                    <div class="chat-row right">
+                      <div>
+                        <div class="bubble dark-gray">
+                          Does anyone have the GitHub repo link?
+                        </div>
+                        <div class="chat-time">3:26 AM</div>
+                      </div>
+                    </div>
+
+                    <!-- Bubble 3 (Left Gray) -->
+                    <div class="chat-row">
+                      <div class="avatar-circle img-avatar" style="width:24px; height:24px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#64748b"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+                      </div>
+                      <div>
+                        <div class="bubble gray" style="width: 130px; height: 26px;"></div>
+                        <div class="chat-time" style="text-align:left;">1:23 AM</div>
+                      </div>
+                    </div>
+
+                    <!-- Bubble 4 (Right Dark Gray with Avatar "J") -->
+                    <div class="chat-row right">
+                      <div class="bubble dark-gray">
+                        Here is the branch with starter code.
+                      </div>
+                      <div class="avatar-circle" style="background:#475569; width:24px; height:24px; font-size:11px;">J</div>
+                    </div>
+
+                    <!-- Bubble 5 (Right Attachment Pill) -->
+                    <div class="chat-row right">
+                      <div>
+                        <div class="bubble attachment-pill">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                          <span>starter_code.py</span>
+                        </div>
+                        <div class="chat-time">3:28 AM</div>
+                      </div>
+                    </div>
+
+                    <!-- Bubble 6 (Left Typing Indicator) -->
+                    <div class="chat-row">
+                      <div class="avatar-circle img-avatar" style="width:24px; height:24px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#64748b"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+                      </div>
+                      <div class="bubble typing-placeholder">
+                        ...
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- Chat Input Pill -->
+                  <div class="chat-input-rounded">
+                    <span>message...</span>
+                    <div class="chat-input-icons">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Phone Bottom Navigation -->
+                <div class="phone-bottom-nav">
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="M12 12v-4"/></svg>
+                    <span>Dashboard</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    <span>Assignments</span>
+                  </div>
+                  <div class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>Chat</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Settings</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ================= 2. TEACHER VIEW ================= -->
+        <section class="section-group" style="margin-top: 20px;">
+          <h2 class="section-header-title">Teacher view</h2>
+
+          <div class="wireframes-row two-col">
+            <!-- PHONE 4: Teacher dashboard -->
+            <div class="wireframe-column">
+              <h3 class="wireframe-subtitle">Teacher dashboard</h3>
+              <div class="phone-wireframe">
+                
+                <!-- Phone Body -->
+                <div class="phone-body" style="gap: 10px;">
+                  
+                  <!-- 1. Class Header / Overview Metric (Slide 5 Feature) -->
+                  <div class="teacher-sub-card" style="padding: 8px 10px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <div>
+                        <div style="font-weight: 700; font-size: 13px; color: #0f172a;">CS 101: Intro to Computer Science</div>
+                        <div style="font-size: 10.5px; color: var(--wireframe-muted);">42 Students Enrolled • Section A</div>
+                      </div>
+                      <span style="font-size: 11px; font-weight: 700; border: 1.2px solid var(--wireframe-stroke); border-radius: 4px; padding: 2px 6px; background: #f1f5f9;">88% Turned In</span>
+                    </div>
+                  </div>
+
+                  <!-- 2. Class-Wide Submission Overview (Slide 5 Feature) -->
+                  <div class="dashed-wireframe-box" style="padding: 10px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                      <span class="metric-title" style="font-size: 13px;">Assignments Progress</span>
+                      <span style="font-size: 10.5px; color: var(--wireframe-muted);">Active Tasks</span>
+                    </div>
+
+                    <!-- Task 1 -->
+                    <div class="class-progress-item">
+                      <div class="class-progress-header">
+                        <span>Lab 4: Binary Search Trees</span>
+                        <span>37/42 (88%)</span>
+                      </div>
+                      <div class="class-progress-track">
+                        <div class="class-progress-fill" style="width: 88%;"></div>
+                      </div>
+                    </div>
+
+                    <!-- Task 2 -->
+                    <div class="class-progress-item">
+                      <div class="class-progress-header">
+                        <span>Project 1: SQL Database API</span>
+                        <span>28/42 (66%)</span>
+                      </div>
+                      <div class="class-progress-track">
+                        <div class="class-progress-fill" style="width: 66%;"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 3. Students Falling Behind (Slide 5 Feature) -->
+                  <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                      <span class="metric-title" style="font-size: 13px;">Students Falling Behind (2)</span>
+                    </div>
+
+                    <!-- Alert 1 -->
+                    <div class="teacher-alert-card" style="margin-bottom: 6px;">
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        <div>
+                          <strong style="font-size: 12px; color: #0f172a;">Alex Rivera</strong>
+                          <div style="font-size: 10.5px; color: var(--wireframe-muted);">Missing Lab 3 & 4 • Inactive 5 days</div>
+                        </div>
+                      </div>
+                      <button class="mini-btn">Remind</button>
+                    </div>
+
+                    <!-- Alert 2 -->
+                    <div class="teacher-alert-card">
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        <div>
+                          <strong style="font-size: 12px; color: #0f172a;">Mia Chen</strong>
+                          <div style="font-size: 10.5px; color: var(--wireframe-muted);">Project 1 not started • Grade: 58%</div>
+                        </div>
+                      </div>
+                      <button class="mini-btn">Remind</button>
+                    </div>
+                  </div>
+
+                  <!-- 4. Group Chat Activity (Slide 5 Feature) -->
+                  <div class="dashed-wireframe-box" style="padding: 8px 10px;">
+                    <div class="metric-title" style="font-size: 13px; margin-bottom: 4px;">Group Project Chat Activity</div>
+                    
+                    <div class="chat-velocity-row">
+                      <span><strong>Team Alpha</strong> (Database Project)</span>
+                      <span style="font-weight: 700; color: #0f172a;">42 msgs • Active</span>
+                    </div>
+                    <div class="chat-velocity-row">
+                      <span><strong>Team Beta</strong> (API Backend)</span>
+                      <span>18 msgs • Moderate</span>
+                    </div>
+                    <div class="chat-velocity-row">
+                      <span><strong>Team Gamma</strong> (Frontend UI)</span>
+                      <span style="color: #64748b;">3 msgs • Needs check-in</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Phone Bottom Navigation -->
+                <div class="phone-bottom-nav">
+                  <div class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="M12 12v-4"/></svg>
+                    <span>Dashboard</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    <span>Assignments</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>Chat</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Settings</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PHONE 5: Teacher chat oversight -->
+            <div class="wireframe-column">
+              <h3 class="wireframe-subtitle">Teacher chat oversight</h3>
+              <div class="phone-wireframe">
+                
+                <!-- Phone Body -->
+                <div class="phone-body">
+                  
+                  <!-- Group 1 -->
+                  <div class="teacher-class-card">
+                    <span>Team Alpha: Database</span>
+                    <!-- Bell off / muted icon -->
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2c2f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                      <path d="M18.63 13A17.89 17.89 0 0 1 18 8"></path>
+                      <path d="M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14"></path>
+                      <line x1="1" y1="1" x2="23" y2="23"></line>
+                    </svg>
+                  </div>
+
+                  <!-- Group 2 (Active Gray) -->
+                  <div class="teacher-class-card active-gray">
+                    <span>Team Beta: API Backend</span>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <span style="font-size: 11px; font-weight: 700; color: #1e293b; border: 1.2px solid var(--wireframe-stroke); border-radius: 4px; padding: 2px 6px; background: #fff;">Active</span>
+                      <div class="avatar-circle img-avatar" style="width: 22px; height: 22px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#475569"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Group 3 -->
+                  <div class="teacher-class-card">
+                    <span>Team Gamma: Frontend UI</span>
+                    <!-- Bell off / muted icon -->
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2c2f35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                      <path d="M18.63 13A17.89 17.89 0 0 1 18 8"></path>
+                      <path d="M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14"></path>
+                      <line x1="1" y1="1" x2="23" y2="23"></line>
+                    </svg>
+                  </div>
+
+                  <!-- Dashed Box: Notifications settings -->
+                  <div class="dashed-wireframe-box" style="text-align: center;">
+                    <!-- Bell Icon -->
+                    <div style="display: flex; justify-content: center; margin-bottom: 4px;">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2c2f35" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                      </svg>
+                    </div>
+
+                    <div style="font-weight: 700; font-size: 13.5px; margin-bottom: 8px;">Oversight Notification Rules</div>
+
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                      <span style="font-size: 12px; font-weight: 600;">Notify on inactive teams</span>
+                      <div class="toggle-switch-wireframe active">
+                        <div class="toggle-knob"></div>
+                      </div>
+                    </div>
+
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                      <span style="font-size: 12px; font-weight: 600;">Alert if student mentioned</span>
+                      <div class="toggle-switch-wireframe active">
+                        <div class="toggle-knob"></div>
+                      </div>
+                    </div>
+
+                    <div style="font-size: 10.5px; color: var(--wireframe-muted); text-align: left; margin-top: 4px;">
+                      Auto-alerts teacher when group activity drops below threshold before deadlines.
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Phone Bottom Navigation -->
+                <div class="phone-bottom-nav">
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="M12 12v-4"/></svg>
+                    <span>Dashboard</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    <span>Assignments</span>
+                  </div>
+                  <div class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>Chat</span>
+                  </div>
+                  <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Settings</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ======== DESKTOP WIREFRAME SECTION ======== -->
+  <div id="canvasViewport" style="display:none"><!-- placeholder --></div>
+
+  <div class="excalidraw-zoom-hud" title="Excalidraw Canvas Zoom">
+    <!-- Zoom Out (-) -->
+    <button id="btnZoomOut" class="hud-btn" title="Zoom Out (Ctrl + -)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </button>
+    
+    <!-- Zoom Display Level / Reset (100%) -->
+    <span id="zoomLevelDisplay" class="hud-zoom-val" title="Click to reset to 100% (Ctrl + 0)">100%</span>
+    
+    <!-- Zoom In (+) -->
+    <button id="btnZoomIn" class="hud-btn" title="Zoom In (Ctrl + +)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </button>
+    
+    <div class="hud-divider"></div>
+
+    <!-- Reset to 100% -->
+    <button id="btnZoomReset" class="hud-btn" title="Reset Zoom to 100% (Ctrl + 0)" style="font-size: 13px;">
+      1:1
+    </button>
+
+    <!-- Fit to Screen -->
+    <button id="btnFitScreen" class="hud-btn" title="Fit to Screen (Ctrl + 1)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 3 21 3 21 9"></polyline>
+        <polyline points="9 21 3 21 3 15"></polyline>
+        <line x1="21" y1="3" x2="14" y2="10"></line>
+        <line x1="3" y1="21" x2="10" y2="14"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Bottom-Right Navigation Hint -->
+  <div class="canvas-hint-pill">
+    🖱️ Scroll wheel to zoom • Drag canvas or hold Space to pan • Double click to fit
+  </div>
+
+  <script src="js/canvas-zoom.js"></script>
+</body>
+</html>
